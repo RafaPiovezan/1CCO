@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinheiro</title>
+</head>
+<body>
+    <label for="">Quantas moedas Huguinho colocou?</label>
+    <input type="text" placeholder="Quantidade" id="hugo"><br><br>
+    <label for="">Quantas moedas Zezinho colocou?</label>
+    <input type="text" placeholder="Quantidade" id="ze"><br><br>
+    <label for="">Quantas moedas Luizinho colocou?</label>
+    <input type="text" placeholder="Quantidade" id="luis"><br>
+
+    <br>
+    <button onclick="calcular()">Valores</button><br>
+    <div id="resultado">
+
+    </div>
+</body>
+</html>
+<script>
+
+    function calcular() {
+        resultado.innerHTML = `<p>O <span style = 'color:red'><b>Huguinho</b></span> economizou <b>R${hugo.value *0.5}</b>   pois ele fez <b><u>${hugo.value}</u></b> depósitos</p>
+        <p>O <span style = 'color:blue'><b>Zezinho</b></span> economizou <b>R${ze.value *0.5}</b>   pois ele fez <b><u>${ze.value}</u></b> depósitos</p>
+        <p>O <span style = 'color:green'><b>Luizinho</b></span> economizou <b>R${luis.value *0.5} </b> pois ele fez <b><u>${luis.value}</u></b> depósitos</p>`
+    }
+</script>

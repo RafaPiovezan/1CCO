@@ -1,0 +1,34 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Consulte se você perdeu ou ganhou peso</h1>
+<label for="">Quantos pães fraceses você comeu hoje?</label>
+    <input type="text" placeholder="Pães" id="pao"><br><br>
+    <label for="">Quantas casquinhas do McDonald´s você comeu hoje?</label>
+    <input type="text" placeholder="Casquinhas" id="casquinha"><br><br>
+    <label for="">Quantos minutos de musculação você fez hoje?</label>
+    <input type="text" placeholder="Minutos de musculação" id="musc"><br><br>
+    <label for="">Quantos minutos de caminhada você fez hoje ?
+    </label>
+    <input type="text" placeholder="Minutos de Caminhada" id="caminhar"><br><br>
+    <button onclick="calcular()">Calcule</button>
+    <div id="resultado">
+
+    </div>
+</body>
+</html>
+<script>
+
+    function calcular() {
+        resultado.innerHTML = `
+        <img src ='https://a-static.mlcdn.com.br/618x463/calculadora-eletronica-12-digitos-c-som-fix/centralfogoes/671502012/b0fb283ba8c63ec3c7ea0c366e3b10dc.jpg' style = 'height:200px'><br>
+        <p style ='background-color:red;color:white'>Você no total consumiu: ${(pao.value*100)+(casquinha.value*300)} calorias e gastou: ${(musc.value*30)+(caminhar.value*50)}</p>
+        <p style ='background-color:red;color:white'>Entre calorias que ganhou e perdeu, seu saldo de calorias no dia é de ${((musc.value*30)+(caminhar.value*50))-((pao.value*100)+(casquinha.value*300))}</p>`
+    }
+</script>
