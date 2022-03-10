@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quanto você perde com medicamentos que estragam?</h1>
+    <label for="">Qual o valor do medicamento adquirido?</label>
+    <input type="text" placeholder="valor do medicamento" id="valor"> <br> <br>
+    <label for="">Qual a quantidade comprada?</label>
+    <input type="text" placeholder="quantidade comprada" id="qntd"> <br> <br>
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+    function calcular() {
+        resultado.innerHTML =`<p>O valor aproximado que você perde sem o nosso sistema no transporte dos seus medicamento é de R$ ${Number(valor.value)*Number(qntd.value)} reais</p>
+        <p>Com o nosso sistema você consegue aproximadamente 90% desse valor reduzido</p>`
+    }
+</script>
