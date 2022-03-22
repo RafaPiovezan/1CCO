@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="praca()"> Votar na Praça é Nossa</button>
+    <button onclick="zorra()"> Votar no Zorra Total</button>
+
+    <div id="resultado">
+
+    </div>
+</body>
+</html>
+<script>
+var p = 0;
+var z =0
+        resultado.innerHTML = `<p>Votos na Praça é Nosaa:  </p> ` + p +  `<p>Votos no Zorra Total:  </p>` + z;
+    function praca() {
+        p = p + 1;
+        resultado.innerHTML = `<p>Votos na Praça é Nosaa:  </p> ` + p +  `<p>Votos no Zorra Total:  </p>` + z;
+    }
+    function zorra() {
+        z = z + 1;
+        resultado.innerHTML = `<p>Votos na Praça é Nosaa:  </p> ` + p +  `<p>Votos no Zorra Total:  </p>` + z;
+    }
+</script>

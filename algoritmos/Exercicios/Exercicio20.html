@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Salario </h1>
+
+    <input type="text" placeholder="salario" id="salario">
+
+    <button onclick="atualizar()">Confirmar salario</button>  <br> <br>
+    <button onclick="menos100()">Pagar conta de 100</button>
+    <button onclick="menos500()">Pagar conta de 500</button>
+    <button onclick="mais2000()">Ganhar 2000 na loteria</button>
+
+    <div id="resultado">
+
+
+    </div>
+</body>
+</html>
+<script>
+    var  sala = 0;
+    
+    function atualizar() {
+        sala =  Number(salario.value) ; 
+        resultado.innerHTML =  `<p>Sua grana atual é:  ${sala} </p>`
+      
+    }
+    function menos100(){
+
+         sala =  sala - 100 ; 
+        resultado.innerHTML =  `<p>Sua grana atual é:  ${sala} </p>`
+    }
+    function menos500(){
+
+        sala =  sala - 500 ; 
+        resultado.innerHTML =  `<p>Sua grana atual é:  ${sala} </p>`
+    }
+    function mais2000(){
+
+sala =  sala + 2000 ; 
+resultado.innerHTML =  `<p>Sua grana atual é:  ${sala} </p>`
+}
+</script>

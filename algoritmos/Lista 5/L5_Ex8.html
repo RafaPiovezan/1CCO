@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Qual Hobby você gosta de praticar?</h1>
+    <select name="" id="escolha" >
+        <option value="">escolher</option>
+        <option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Dancer_With_Red_Dress_Emoji_400x400.png">Dança</option>
+        <option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Virus_Emoji_400x400.png">Video Game</option>
+        <option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Man_Bowing_Emoji_400x400.png"> Assistir tv/streaming: </option>
+        <option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Sign_of_the_Horns_Emoji_400x400.png">Ouvir Rock</option>
+    </select>
+    <button onclick="mostrar()" >Escolher</button>
+    <div id="final" >
+
+    </div>
+</body>
+</html>
+
+<script>
+var aumentar = 50;
+    function mostrar() {
+      aumentar = aumentar + 10;
+        final.innerHTML = `<img src = "${escolha.value}" id="foto" >`;
+        foto.style.width = aumentar + "px"
+    }
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="mensagem()" style="width: 15%;height:50px;">Boas vindas no alerta</button>
+    <button onclick="pagina()" style="width: 15%;height:50px;">Boas vindas na pagina</button>
+    <div id="bemvindo">
+
+    </div>
+</body>
+</html>
+<script>
+    function mensagem() {
+        alert("Bem-vindo(a)");
+    }
+    function pagina() {
+        bemvindo.innerHTML = "<p style='width:15%;background-color:black;color:yellow;text-align:center'>Bem-vindo(a)</p>"
+    }
+</script>

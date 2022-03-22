@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<select id="produto">
+    <option value="" >Selecione</option>
+    <option value="4.99">Leite</option>
+    <option value="2.50">Farinha</option>
+    <option value="3.00">Ovo</option>
+    <option value="5.00">Açucar</option>
+
+</select>
+<button onclick="verpreco()">Ver Preço</button>
+</body>
+</html>
+
+<script>
+    function verpreco() {
+        alert (`isso custa R$${produto.value}`) ;
+        
+    }
+ 
+    
+</script>

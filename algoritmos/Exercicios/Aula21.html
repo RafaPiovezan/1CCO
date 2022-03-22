@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de endereço</h1>
+    <input type="text" id="rua" placeholder="Nome da rua ">
+    <input type="text" id="numero" placeholder="numero da casa">
+    <button onclick="executar()">cadastrar</button>
+    <h3>O seu endereço é:</h3>
+    <div id="resultado">
+
+
+    </div>
+</body>
+</html>
+<script>
+    function executar() {
+        resultado.innerHTML = `<p>o seu lagradouro é ${rua.value} </p> <p>O numero do seu logradouro é ${numero.value}</p>`
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="texto">
+
+
+    </div>
+    <button onclick="adicionar5()"> Adicionar R$0,50</button>
+    <button onclick="adicionar1()"> Adicionar R$1,00 </button>
+</body>
+</html>
+<script>
+    
+    var valor = 0;
+    var deposito = 0;
+
+    texto.innerHTML = `<p>Total guardado no cofrinho:  </p> ` + valor +  `<p>Depósitos efetuados:  </p>` + deposito;
+
+
+    function adicionar5() {
+        valor = valor + 0.5;
+        deposito = deposito + 1;
+        texto.innerHTML = `<p>Total guardado no cofrinho:  </p> ` + valor +  `<p>Depósitos efetuados:  </p>` + deposito;
+    }
+  function adicionar1() {
+        valor = valor +1;
+        deposito = deposito + 1;
+        texto.innerHTML = `<p>Total guardado no cofrinho:  </p> ` + valor +  `<p>Depósitos efetuados:  </p>` + deposito;
+    }
+
+</script>

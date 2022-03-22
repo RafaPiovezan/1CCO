@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcular IMC</h1> 
+    <label for="">Seu peso:</label>
+    <input type="text" placeholder="Seu Peso:" id="peso">
+    <br><br>
+    <label for="">Sua altura em metros:</label>
+    <input type="text" placeholder="Sua Altura: ex: 1.80" id="altura">
+    <br><br>
+    <button onclick="homem()">IMC Homem</button>
+    <button onclick="mulher()">IMC Mulher</button>
+    <br>
+    <div id="imc">
+
+    </div>
+    <script>
+        function homem() {
+            imc.innerHTML =`<p>Senhor seu imc é de: <b>${Number(peso.value/(altura.value*altura.value))} </b></p>`
+        }
+        function mulher() {
+            imc.innerHTML =`<p>Senhor seu imc é de: <b>${Number(peso.value/(altura.value*altura.value))*0.9} </b></p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="numero" onchange="troca()"> 
+        <option value="">selecione</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+     
+    </select>
+   
+    <div id="tabuada"></div>
+</body>
+</html>
+<script>
+    var n =  0 
+    function troca() { 
+        n = numero.value;
+        tabuada.innerHTML = `<p> A tabuada do numero ${numero.value} é :</p>
+        <p>`+n+` x 0 = ${numero.value * 0 }</p>
+        <p>`+n+` x 1 = ${numero.value * 1 }</p>
+        <p>`+n+` x 2 = ${numero.value * 2 }</p>
+        <p>`+n+` x 3 = ${numero.value * 3 }</p>
+        <p>`+n+` x 4 = ${numero.value * 4 }</p>
+        <p>`+n+` x 5 = ${numero.value * 5 }</p>
+        <p>`+n+` x 6 = ${numero.value * 6 }</p>
+        <p>`+n+` x 7 = ${numero.value * 7 }</p>
+        <p>`+n+` x 8 = ${numero.value * 8 }</p>
+        <p>`+n+` x 9 = ${numero.value * 9 }</p>`
+    }
+</script>

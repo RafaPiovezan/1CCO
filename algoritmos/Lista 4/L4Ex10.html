@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Ki base" id="ki">
+    <h4>Transformar em...</h4>
+    <button onclick="ssj()"> SSJ</button>
+    <button onclick="ssj2()"> SSJ2</button>
+    <button onclick="ssj3()"> SSJ3</button>
+    <button onclick="ssj4()"> SSJ4</button>
+    <br><br>
+    <div id="a">
+        <img src="https://i.pinimg.com/originals/99/4a/bf/994abf73480680ccdc64d6ae3705d04c.png" style="display: block;height: 100px;" id="goku">
+    </div>
+</body>
+</html>
+<script>
+    var k = 0
+
+function ssj() {
+    var k = ki.value;
+    a.innerHTML= `<span> Após se transformar em SSJ2, o ki desse Sayajin passa a ser de `+ ki.value + `</span>
+    <br>  <img src="https://i.pinimg.com/originals/99/4a/bf/994abf73480680ccdc64d6ae3705d04c.png" style="display: block;height: 100px;">`;
+
+}
+function ssj2() {
+    var k = ki.value;
+    a.innerHTML= `<span> Após se transformar em SSJ2, o ki desse Sayajin passa a ser de `+ k*50 + `</span>
+    <br> <img src = "https://i.pinimg.com/originals/d7/3f/8e/d73f8ef7ca92dc76adf4458a748b17f8.jpg" style="display: block;height: 100px;">`;
+    goku.style.display = "none"
+}
+function ssj3() {
+    var k = ki.value;
+    a.innerHTML= `<span> Após se transformar em SSJ3, o ki desse Sayajin passa a ser de `+ k*100 + `</span>
+    <br> <img src = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3eb70ccc-e7ad-4e1a-87fa-f97df9ef1c52/db336ev-3a7491d8-8f1c-4b9f-8e3c-6bfff216da02.png/v1/fill/w_1024,h_1049,strp/goku_ssj2_by_saodvd_db336ev-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA0OSIsInBhdGgiOiJcL2ZcLzNlYjcwY2NjLWU3YWQtNGUxYS04N2ZhLWY5N2RmOWVmMWM1MlwvZGIzMzZldi0zYTc0OTFkOC04ZjFjLTRiOWYtOGUzYy02YmZmZjIxNmRhMDIucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.yFkz8tUE99be2OCo4PhxOcETf1kR_AtaoIMpYrZe-p8" style="display: block;height: 100px;">`;
+    goku.style.display = "none"
+}
+function ssj4() {
+    var k = ki.value;
+    a.innerHTML= `<span> Após se transformar em SSJ4, o ki desse Sayajin passa a ser de `+ k*200 + `</span>
+    <br> <img src ="https://e1.pngegg.com/pngimages/211/581/png-clipart-goku-ssj3-thumbnail.png" style="display: block;height: 100px;">`;
+
+}
+
+
+</script>

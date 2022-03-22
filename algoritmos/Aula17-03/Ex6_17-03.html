@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select name="" id="imagem">
+        <option value="">Selecione</option>
+        <option value="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/03/primavera-destinos-norte-capa-01.jpg">Primavera</option>
+        <option value="https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2012/07/verao.jpg">Verão</option>
+        <option value="https://static.mundoeducacao.uol.com.br/mundoeducacao/2020/11/folhas.jpg">Outono</option>
+        <option value="https://t5z6q4c2.rocketcdn.me/wp-content/uploads/2020/04/inverno-datas-e-caracteristicas.jpg">Inverno</option>
+    </select>
+    <button onclick="mostrar()">Estação</button>
+    <div id="fun"></div>
+
+</body>
+</html>
+<script>
+function mostrar(params) {
+
+    fun.innerHTML = `<img src = "${imagem.value}" style = "width:200px">`;
+}
+</script>

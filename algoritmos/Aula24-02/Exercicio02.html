@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria</title>
+</head>
+<body>
+    <h1>Quanto tempo falta para me aposentar?</h1>
+
+    <input type="text" placeholder="sua idade:" id="idade">
+    <input type="button" value="Aposentadoria homem" id="homem" onclick="homem()">
+    <input type="button" value="Aposentadoria mulher" id="mulher" onclick="mulher()">
+
+<div id="resultado" >
+
+</div>
+    <script>
+function homem() {
+    resultado.innerHTML =`<p style=' color:green'> Se for <u>homem</u> faltam   <b>${70- idade.value}  </b> anos p/ se aposentar</p>`
+    
+}
+function mulher() {
+    resultado.innerHTML =`<p style ='color:darkmagenta'> Se for <u>mulher</u> faltam <b>${60- idade.value}  </b> anos p/ se aposentar</p>`
+    
+}
+    </script>
+</body>
+</html>

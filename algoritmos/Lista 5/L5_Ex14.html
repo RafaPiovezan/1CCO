@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Escolha o sabor da pizza</h1>
+    <select name="" id="opcao">
+        <option value="">Escolha o sabor</option>
+        <option value="23">Muçarela</option>
+        <option value="24">Calabresa</option>
+        <option value="26">Atum</option>
+        <option value="30">Portuguesa</option>
+    </select>
+    <h2> Incremento na pizza</h2>
+        <select name="" id="inc1">
+        <option value="">Escolha o sabor</option>
+        <option value="2">Queijo</option>
+        <option value="2.5">Presunto</option>
+        <option value="1.5">Ovo</option>
+        <option value="4">Palmito</option>
+        <option value="3.5">Frango</option>
+        <option value="3">Catupiry</option>
+    </select>
+    <select name="" id="inc2">
+        <option value="">Escolha o sabor</option>
+        <option value="2">Queijo</option>
+        <option value="2.5">Presunto</option>
+        <option value="1.5">Ovo</option>
+        <option value="4">Palmito</option>
+        <option value="3.5">Frango</option>
+        <option value="3">Catupiry</option>
+    </select>
+    <select name="" id="inc3">
+        <option value="">Escolha o sabor</option>
+        <option value="2">Queijo</option>
+        <option value="2.5">Presunto</option>
+        <option value="1.5">Ovo</option>
+        <option value="4">Palmito</option>
+        <option value="3.5">Frango</option>
+        <option value="3">Catupiry</option>
+    </select>
+    <br><br>
+    <button onclick="calcular()">Calcular Valor da pizza</button>
+    <div id="valores"></div>
+</body>
+</html>
+
+<script>
+    var sabor = 0;
+    var incre1 = 0;
+    var incre2 = 0;
+    var incre3 = 0;
+
+    function calcular() {
+        var sabor = Number(opcao.value);
+    var incre1 =  Number(inc1.value);
+    var incre2 =  Number(inc2.value);
+    var incre3 =  Number(inc3.value);
+valores.innerHTML = `<p> A pizza era R$<b> ${sabor}</b>, mas foi acrescido R$${incre1}, R$${incre2} e R$${incre3} custará um total de <u>R$<b><span style = "color:red">${sabor+incre1 + incre2 + incre3}</span></n></u></p>`
+    }
+</script>

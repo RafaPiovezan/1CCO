@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="lilnas">
+   
+        <img src="https://s2.glbimg.com/TaOb8RJ_Dg4uQluqv-A0xu4ke2g=/512x320/smart/e.glbimg.com/og/ed/f/original/2021/08/17/image_h1uGmeS.png" style="width: 400px;">
+        <span id="votosL" >
+
+
+        </span>
+       
+   
+    </div>
+    <div id="melanie">
+        <img src="https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/c/0/6/e/c06e5b6d6a73bd671dd40e3f4e5b43fb.jpg" style="width: 400px;">
+
+
+        <span id="votosM" >
+
+            
+        </span>
+    </div>
+    <br><br>
+    <button onclick="lil()">Votar Lil Nas X</button>
+    <button onclick="mel()">Votar Melanie</button>
+</body>
+</html>
+<script>
+    var L = 0 ;
+
+    var M = 0;
+
+    votosL.innerHTML = `<b> Votos: </b> `+ L;
+    votosM.innerHTML = `<b> Votos: </b>`+ M;
+
+
+function lil() {
+     L = L + 1;
+     votosL.innerHTML = `Votos: `+ L;
+}
+function mel() {
+     M = M + 1;
+     votosM.innerHTML = `Votos: `+ M;
+}
+
+</script>

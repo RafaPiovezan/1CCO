@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="ponto">
+        <option value="">Selecione</option>
+        <option value="1">1 estrela</option>
+        <option value="2">2 estrela</option>
+        <option value="3">3 estrela</option>
+        <option value="4">4 estrela</option>
+        <option value="5">5 estrela</option>
+        
+    </select>
+    <button onclick="ava()">Avaliação</button>
+    <div id="mostrar">
+
+    </div>
+</body>
+</html>
+<script>
+    var valor = 0
+    var resultado = 0 
+    var avali = 0
+
+
+    mostrar.innerHTML = `<p>Média atual: ${valor} estrelas</p>
+        	<p>Número de avaliações:  ${avali}</p> `
+    function ava() {
+
+        valor = Number(ponto.value)  + valor;
+        avali =  avali + 1;
+        mostrar.innerHTML = `<p>Média atual: ${valor} estrelas</p>
+        	<p>Número de avaliações:  ${avali}</p> `
+        
+    }
+
+</script>

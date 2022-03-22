@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="ssj()">Transformar em SSJ</button>
+    <div id="poder1">
+        <span style = "background-color: darkblue; width :13%; color:white ; display:none" id="n1"> ki na forma SSJ: 100000</span>
+        
+    </div>
+    <button onclick="ssj2()">Transformar em SSJ2</button>
+    <div id="poder2">
+        <span style = "background-color: darkblue;  width :13% ; color :yellow;display:none" id="n2"> ki na forma SSJ: 200000</span>
+
+    </div>
+    <button onclick="ssj3()">Transformar em SSJ3</button>
+    <div id="poder3">
+        <span style = "background-color: yellow;  width :13% ; color :orange;display:none" id="n3"> ki na forma SSJ3: 400000</div>
+
+    </div>
+    <button onclick="limpar()">Voltar a forma base</button>
+
+    <div id="poder4">
+        <span style = "display:none" id="n4">ki base do Guerreiro Sayajin: 2000 <span>
+
+    </div>
+</body>
+
+
+</html>
+
+<script>
+    function ssj() {
+        n1.style.display = "block"
+        n2.style.display = "none";
+        n3.style.display = "none";
+        n4.style.display = "none";
+    
+    }
+
+    function ssj2() {
+        n1.style.display = "none"
+        n2.style.display = "block";
+        n3.style.display = "none";
+        n4.style.display = "none";
+    
+    
+    }
+
+    function ssj3() {
+        n1.style.display = "none"
+        n2.style.display = "none";
+        n3.style.display = "block";
+        n4.style.display = "none";
+    
+    }
+
+    function limpar() {
+        n1.style.display = "none"
+        n2.style.display = "none";
+        n3.style.display = "none";
+        n4.style.display = "block";
+    }
+</script>

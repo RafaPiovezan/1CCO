@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Escolha a moeda</h1>
+    <select name="" id="moeda" >
+        <option value="">Escolher o valor</option>
+<option value="1">1 Real </option>
+<option value="5.09">1 Dollar</option>
+<option value="5.64">1 Euro</option>
+    </select>
+    <button id="clique" onclick="add()" >Depositar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+ var valor = 0;
+ var deposito= 0;
+ var media = 0;
+ resultado.innerHTML = `<p>O saldo do cofrinho é de: <b>${valor.toFixed(2)}</b></p>
+    <p>A quantidade de operações foi: <b>${deposito}</b></p>
+    <p>A quantidade de operações foi: <b>${media}</b></p>   `
+ function add() {
+     valor = valor + Number(moeda.value);
+     deposito ++;
+    media = valor/deposito;
+   
+    
+    resultado.innerHTML = `<p>O saldo do cofrinho é de: <b>${valor.toFixed(2)}</b></p>
+    <p>A quantidade de operações foi: <b>${deposito}</b></p>
+    <p>A quantidade de operações foi: <b>${media.toFixed(2)}</b></p>   `
+ }
+
+</script>

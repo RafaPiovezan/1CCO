@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="historia">
+        <option value="">Selecione</option>
+        <option value="Uma vez...">Uma vez...</option>
+        <option value="Num belo dia...">Num belo dia...</option>
+        <option value="Numa noite chuvosa...">Numa noite chuvosa...</option>
+    </select>
+    <select name="" id="final">
+        <option value="">Selecione</option>
+        <option value="Um peixe morreu afogado">Um peixe morreu afogado</option>
+        <option value="Um gato tomou banho">Um gato tomou banho</option>
+        <option value="Um corvo se curvou  ">Um corvo se curvou  </option>
+
+    </select>
+    <button onclick="hist()">Mostrar História</button>
+</body>
+</html>
+<script>
+    function hist() {
+        alert (`${historia.value} ${ final.value}`)
+    }
+</script>
