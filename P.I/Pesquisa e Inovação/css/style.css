@@ -1,0 +1,40 @@
+
+body{
+    margin:0;
+    background-color: black;
+    font-family: monospace;
+}
+
+.header{
+    border: 3px solid rgb(0, 201, 151);
+
+}
+.header .container{
+margin:auto ;
+width: 80%;
+border: 3px solid pink;
+display: flex;
+justify-content: space-between;
+}
+.header ul .aqui{
+    color:blue
+}
+
+.cor{
+    color:rgb(0, 201, 151);
+}
+.navBar{
+ text-decoration: none;
+ list-style: none;
+ border: 3px solid green;
+ display: flex;
+ color: orange;
+ justify-content: space-evenly;
+ padding: 0;
+ width: 300px;
+ align-items: center;
+}
+.titulo{
+    border: 3px solid red;
+    width: fit-content;
+}
