@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <label for="">Quantidade de Pontos:</label>
+    <input type="text" id="ponto">
+    <button onclick="calculo()">Calcular multa</button>
+    <div id="mostrar">
+
+    </div>
+</body>
+</html>
+<script>
+    var p = 0;
+    var valor = 0;
+
+    function calculo() {
+
+        p = ponto.value;
+        
+        if (p >=20){
+            valor = p * 87;
+            alert ("Carteira suspensa!!")
+            mostrar.innerHTML = `
+            <p>O valor da multa a ser pago é R$${Number(valor)},00</p>`
+        }else{
+            valor = p * 78;
+            mostrar.innerHTML = `<p>O valor da multa a ser pago é R$${Number(valor)},00</p>`
+        }     
+        }
+</script>

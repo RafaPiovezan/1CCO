@@ -1,0 +1,123 @@
+C:\Program Files\MySQL\MySQL Server 8.0
+
+mysql.exe -u aluno -p
+
+create database sprint2;
+
+
+Create table tbDono(
+idDono int primary key auto_increment,
+nome varchar(40),
+dataNasc date,
+salario decimal(10,2)
+);
+
+create table tbCarro(
+idCarro int primary key auto_increment,
+modelo varchar(40), 
+marca varchar(40),
+placar char (8),
+anoDeFabricacao int,
+fkDono int, foreign key (fkDono) references tbDono(idDono)
+)auto_increment = 101;
+
+insert into tbDono values
+(null,'Pedro', '2000-12-24', 3500.0),
+(null,'Rafaella', '2004-07-27',5000.0),
+(null,'Manuella', '2001-01-18', 13000.0),
+(null,'Maria', '2005-09-20', 3700.0);
+
+insert into tbCarro Values
+(null, 'Carrera','Porsche','ABC1234',2009 ,1),
+(null, 'AMGS63','Mercedes','BRA4321',2005,1),
+(null, 'Fusca','Volkswagen','CBA3451',1990 ,2),
+(null, 'Gol','Porsche','BCA1324',2015,3),
+(null, 'Carrera','Porsche','PRT3456',1999,4);
+
+
+seles  * from tbDono 
++--------+----------+------------+----------+
+| idDono | nome     | dataNasc   | salario  |
++--------+----------+------------+----------+
+|      1 | Pedro    | 2000-12-24 |  3500.00 |
+|      2 | Rafaella | 2004-07-27 |  5000.00 |
+|      3 | Manuella | 0201-01-18 | 13000.00 |
+|      4 | Maria    | 2005-09-20 |  3700.00 |
++--------+----------+------------+----------+
+
+selesct * from tbCarro
+
++---------+---------+------------+---------+-----------------+--------+
+| idCarro | modelo  | marca      | placar  | anoDeFabricacao | fkDono |
++---------+---------+------------+---------+-----------------+--------+
+|     101 | Carrera | Porsche    | ABC1234 |            2009 |      1 |
+|     102 | AMGS63  | Mercedes   | BRA4321 |            2005 |      1 |
+|     103 | Fusca   | Volkswagen | CBA3451 |            1990 |      2 |
+|     104 | Gol     | Porsche    | BCA1324 |            2015 |      3 |
+|     105 | Carrera | Porsche    | PRT3456 |            1999 |      4 |
++---------+---------+------------+---------+-----------------+--------+
+
+select * from tbDono order by dataNasc;
+
++--------+----------+------------+----------+
+| idDono | nome     | dataNasc   | salario  |
++--------+----------+------------+----------+
+|      3 | Manuella | 0201-01-18 | 13000.00 |
+|      1 | Pedro    | 2000-12-24 |  3500.00 |
+|      2 | Rafaella | 2004-07-27 |  5000.00 |
+|      4 | Maria    | 2005-09-20 |  3700.00 |
++--------+----------+------------+----------+
+
+select * from tbCarro order by anoDeFabricacao desc;
++---------+---------+------------+---------+-----------------+--------+
+| idCarro | modelo  | marca      | placar  | anoDeFabricacao | fkDono |
++---------+---------+------------+---------+-----------------+--------+
+|     104 | Gol     | Porsche    | BCA1324 |            2015 |      3 |
+|     101 | Carrera | Porsche    | ABC1234 |            2009 |      1 |
+|     102 | AMGS63  | Mercedes   | BRA4321 |            2005 |      1 |
+|     105 | Carrera | Porsche    | PRT3456 |            1999 |      4 |
+|     103 | Fusca   | Volkswagen | CBA3451 |            1990 |      2 |
++---------+---------+------------+---------+-----------------+--------+
+
+select * from tbCarro where placar like '%1234';
++---------+---------+---------+---------+-----------------+--------+
+| idCarro | modelo  | marca   | placar  | anoDeFabricacao | fkDono |
++---------+---------+---------+---------+-----------------+--------+
+|     101 | Carrera | Porsche | ABC1234 |            2009 |      1 |
++---------+---------+---------+---------+-----------------+--------+
+
+desc tbCarro;
++-----------------+-------------+------+-----+---------+----------------+
+| Field           | Type        | Null | Key | Default | Extra          |
++-----------------+-------------+------+-----+---------+----------------+
+| idCarro         | int         | NO   | PRI | NULL    | auto_increment |
+| modelo          | varchar(40) | YES  |     | NULL    |                |
+| marca           | varchar(40) | YES  |     | NULL    |                |
+| placar          | char(8)     | YES  |     | NULL    |                |
+| anoDeFabricacao | int         | YES  |     | NULL    |                |
+| fkDono          | int         | YES  | MUL | NULL    |                |
++-----------------+-------------+------+-----+---------+----------------+
+
+alter table tbCarro modify modelo varchar (60);
+
++-----------------+-------------+------+-----+---------+----------------+
+| Field           | Type        | Null | Key | Default | Extra          |
++-----------------+-------------+------+-----+---------+----------------+
+| idCarro         | int         | NO   | PRI | NULL    | auto_increment |
+| modelo          | varchar(60) | YES  |     | NULL    |                |
+| marca           | varchar(40) | YES  |     | NULL    |                |
+| placar          | char(8)     | YES  |     | NULL    |                |
+| anoDeFabricacao | int         | YES  |     | NULL    |                |
+| fkDono          | int         | YES  | MUL | NULL    |                |
++-----------------+-------------+------+-----+---------+----------------+
+
+update tbDono set salario = 10000.0 where idDono = 1;
+
++--------+----------+------------+----------+
+| idDono | nome     | dataNasc   | salario  |
++--------+----------+------------+----------+
+|      1 | Pedro    | 2000-12-24 | 10000.00 |
+|      2 | Rafaella | 2004-07-27 |  5000.00 |
+|      3 | Manuella | 0201-01-18 | 13000.00 |
+|      4 | Maria    | 2005-09-20 |  3700.00 |
++--------+----------+------------+----------+

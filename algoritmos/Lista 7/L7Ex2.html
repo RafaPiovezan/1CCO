@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Valor na conta:</label>
+    <input type="text" id="valor">
+    <label for="">Valor do debito</label>
+    <input type="text" id="debito">
+    <button onclick="calcular()">Verificar Valor</button>
+    <div id="show"></div>
+</body>
+
+</html>
+<script>
+    var v = 0;
+    var d = 0;
+var total = 0;
+    function calcular() {
+        v = valor.value;
+        d= debito.value;
+        total = v-d;
+        if(total<0){
+            show.innerHTML = `<p style ="color:red"><b>o saldo atual da conta corrente é ${total}</b></p>`
+        }else{
+            show.innerHTML = `<p style ="color:blue"><i>o saldo atual da conta corrente é ${total}</i></p>`
+       
+        }
+    }
+</script>

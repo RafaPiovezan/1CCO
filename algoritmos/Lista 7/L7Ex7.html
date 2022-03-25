@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Quantidade de homens:</label>
+    <input type="text" id="homem"> <br> <br>
+    <label for="">Quantidade de mulheres:</label>
+    <input type="text" id="mulher"> <br> <br>
+
+    <button onclick="ligar()">Ligar elevador</button> <br> <br>
+
+<div id="f">
+
+</div>
+</body>
+
+</html>
+<script>
+    var pesoM = 0;
+    var pesH = 0;
+ var total = 0;
+ var perder = 0;
+    function ligar() {
+        pesoM = mulher.value * 60;
+        pesoH = homem.value * 80;
+    total = pesoM + pesoH;
+    perder = total - 499;
+if (total<800) {
+    f.innerHTML = `<p style= "color:green">Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${total} kg </p>`
+}else{
+    f.innerHTML = `<p style = "color:blue">Será necessário descer alguém para que o elevador se movimente</p>`
+    if (total) {
+        f.style.color = blue
+    }
+}
+        
+
+    }
+</script>
