@@ -121,3 +121,46 @@ update tbDono set salario = 10000.0 where idDono = 1;
 |      3 | Manuella | 0201-01-18 | 13000.00 |
 |      4 | Maria    | 2005-09-20 |  3700.00 |
 +--------+----------+------------+----------+
+
+select * from tbCarro, tbDono where fkDono = idDono;
+
++---------+---------+------------+---------+-----------------+--------+--------+----------+------------+----------+
+| idCarro | modelo  | marca      | placar  | anoDeFabricacao | fkDono | idDono | nome     | dataNasc   | salario  |
++---------+---------+------------+---------+-----------------+--------+--------+----------+------------+----------+
+|     101 | Carrera | Porsche    | ABC1234 |            2009 |      1 |      1 | Pedro    | 2000-12-24 | 10000.00 |
+|     102 | AMGS63  | Mercedes   | BRA4321 |            2005 |      1 |      1 | Pedro    | 2000-12-24 | 10000.00 |
+|     103 | Fusca   | Volkswagen | CBA3451 |            1990 |      2 |      2 | Rafaella | 2004-07-27 | 20000.00 |
+|     104 | Gol     | Porsche    | BCA1324 |            2015 |      3 |      3 | Manuella | 0201-01-18 | 13000.00 |
+|     105 | Carrera | Porsche    | PRT3456 |            1999 |      4 |      4 | Maria    | 2005-09-20 |  3700.00 |
++---------+---------+------------+---------+-----------------+--------+--------+----------+------------+----------+
+
+ select * from tbCarro, tbDono where fkDono = idDono and nome = 'maria';
+
++---------+---------+---------+---------+-----------------+--------+--------+-------+------------+---------+
+| idCarro | modelo  | marca   | placar  | anoDeFabricacao | fkDono | idDono | nome  | dataNasc   | salario |
++---------+---------+---------+---------+-----------------+--------+--------+-------+------------+---------+
+|     105 | Carrera | Porsche | PRT3456 |            1999 |      4 |      4 | Maria | 2005-09-20 | 3700.00 |
++---------+---------+---------+---------+-----------------+--------+--------+-------+------------+---------+
+
+
+select * from tbCarro, tbDono where fkDono = idDono and marca = 'Porsche';
+
+| idCarro | modelo  | marca   | placar  | anoDeFabricacao | fkDono | idDono | nome     | dataNasc   | salario  |
++---------+---------+---------+---------+-----------------+--------+--------+----------+------------+----------+
+|     101 | Carrera | Porsche | ABC1234 |            2009 |      1 |      1 | Pedro    | 2000-12-24 | 10000.00 |
+|     104 | Gol     | Porsche | BCA1324 |            2015 |      3 |      3 | Manuella | 0201-01-18 | 13000.00 |
+|     105 | Carrera | Porsche | PRT3456 |            1999 |      4 |      4 | Maria    | 2005-09-20 |  3700.00 |
++---------+---------+---------+---------+-----------------+--------+--------+----------+------------+----------+
+
+
+
+select * from tbCarro, tbDono where fkDono = idDono and placa like 'A%';
+
++---------+---------+---------+---------+-----------------+--------+--------+-------+------------+----------+
+| idCarro | modelo  | marca   | placar  | anoDeFabricacao | fkDono | idDono | nome  | dataNasc   | salario  |
++---------+---------+---------+---------+-----------------+--------+--------+-------+------------+----------+
+|     101 | Carrera | Porsche | ABC1234 |            2009 |      1 |      1 | Pedro | 2000-12-24 | 10000.00 |
++---------+---------+---------+---------+-----------------+--------+--------+-------+------------+----------+
+
+drop table tbCarro; //Esse é excluido primeiro por que ele tem fk no dono o que impede de ser excluido
+drop table tbDono;

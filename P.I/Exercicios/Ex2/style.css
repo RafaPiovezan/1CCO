@@ -55,7 +55,7 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-    grid-template-rows: 3fr,1f,2fr;
+
 }
 .mae .div1{
     background: rgb(255, 0, 0);
