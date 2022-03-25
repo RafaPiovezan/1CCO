@@ -1,0 +1,74 @@
+body{
+    margin : 0;
+
+}
+
+.container{
+    width: 60vw;
+   
+    border: 10px solid black;
+    padding: 70px;
+    background: #994c6c;
+    align-items: center;
+}
+.container div{
+    padding: 30px;
+    background: #fff;
+    border: 10px solid darkblue;
+    text-align: center;
+}
+
+.container div p{
+    color: blue;
+    font: 700 25px arial;
+}
+.pai{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.azul{
+    width: 60%;
+    background: blue;
+    height: 30px;
+}
+.roxo{
+    width: 30%;
+    background: purple;
+    height: 30px;
+}
+.verde{
+    width: 50%;
+    background: green;
+    height: 30px;
+}
+.amarela{
+    width: 40%;
+    background: yellow;
+    height: 30px;
+}
+
+.mae{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    grid-template-rows: 3fr,1f,2fr;
+}
+.mae .div1{
+    background: rgb(255, 0, 0);
+    width: 45%;
+    height: 30px;
+}
+.mae .div2{
+    background: rgb(0, 119, 255);
+    width: 20%;
+    height: 30px;
+}
+.mae .div3{
+    background: rgb(9, 255, 0);
+    width: 35%;
+    height: 30px;
+}
