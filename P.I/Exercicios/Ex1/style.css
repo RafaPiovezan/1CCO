@@ -1,9 +1,9 @@
 body{
     margin:0;
 }
-.laranja{
-    height: 300px;
-    width: 100vw;
+body .laranja{ 
+    height: 500px;
+    width: 500px;
     background: #48f150;
 }
 .laranja div{
@@ -18,12 +18,12 @@ body{
     text-align: center;
 }
 body .azulRGB{
-    width: 50vw;
-    height: 50vh;
+    width: 600px;
+    height: 200px;
     background: rgb(229, 255, 0);
 }
 .azulRGB div{
-    width: 50vw;
+    width: 100%;
     height: 50%;
     background: rgb(235, 255, 54);
 }
