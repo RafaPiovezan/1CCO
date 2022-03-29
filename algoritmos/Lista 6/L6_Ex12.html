@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Quantos filhos voce tem?</label>
+    <input type="text" id="filho">
+    <button onclick="verificar()">Analisar Famlia</button>
+    <div id="resultado">
+
+    </div>
+</body>
+</html>
+<script>
+    var f = 0;
+    function verificar() {
+         f = Number(filho.value);
+
+         if (f >=1) {
+             resultado.innerHTML += `<p>Não tem TV</p>`
+         }
+         if (f >=2) {
+             resultado.innerHTML += `<p>Não tem internet</p>`
+         }
+         if (f >=3) {
+             resultado.innerHTML += `<p>Não tem video game</p>`
+         }
+         if (f >=4) {
+             resultado.innerHTML += `<p>Não tem netflix</p>`
+         }
+    }
+</script>
