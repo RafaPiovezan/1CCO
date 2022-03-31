@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Seu nome:</label>
+    <input type="text" name="" id="nome">
+    <label for="">Insira seu saldo bancario:</label>
+    <input type="text" name="" id="saldo">
+
+    <button onclick="calcular()">Verificar Conta</button>
+    <div id="msg">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var s = Number(saldo.value);
+
+        if (s < 0){
+            msg.innerHTML = `com saldo de ${s} o cliente ${nome.value} está com saldo devedor `
+        }
+        else if (s <2000){
+            msg.innerHTML = `com saldo de ${s} o cliente ${nome.value} está com saldo NORMAL`
+        }else if (s< 5000){
+            msg.innerHTML = `com saldo de ${s} o cliente ${nome.value}está com saldo ACIMA DA MÉDIA `
+        }
+        else {
+            msg.innerHTML = `com saldo de ${s} o cliente ${nome.value} TEM PERFIL DE INVESTIDOR `
+        
+        }
+    }
+</script>

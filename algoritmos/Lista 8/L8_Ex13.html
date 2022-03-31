@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mensagem">
+
+    </div>
+    <button onclick="g5()">Guardar 5,00</button>
+    <button onclick="g1()">Guardar 10,00</button>
+    <div id="msg">
+
+    </div>
+</body>
+</html>
+<script>
+    var valor = 0;
+mensagem.innerHTML =`Valor guardado: ${valor}`;
+    function g5() {
+        
+        valor = valor + 5;
+        mensagem.innerHTML =`Valor guardado: ${valor}`;
+
+        if (valor< -20){
+            msg.innerHTML = `<p >Quase um Corinthians!</p>`;
+        }else if (valor< 0){
+            msg.innerHTML = `<p style = "color:red">Finanças em perigo</p>`;
+        }else if(valor > 100){
+            msg.innerHTML = `<p>#ostentação</p>`;
+        }
+        else{
+            msg.innerHTML = `<p style = "color:blue">Finanças OK</p>`;
+            
+        }
+        
+    }
+    function g1() {
+        valor = valor - 10;
+        mensagem.innerHTML =`Valor guardado: ${valor}`;
+
+
+        if (valor< -20){
+            msg.innerHTML = `<p >Quase um Corinthians!</p>`
+        }else if (valor< 0){
+            msg.innerHTML = `<p style = "color:red">Finanças em perigo</p>`
+        }else if (valor > 0){
+            msg.innerHTML = `<p style = "color:blue">Finanças OK</p>`
+        }
+        else {
+            msg.innerHTML = `<p>#ostentação</p>`
+        }
+        
+    }
+</script>

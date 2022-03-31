@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <label for="">Renda Familiar</label>
+      <input type="text" id="renda">
+      <button onclick="calcular()">Analisar Renda</button>
+      <div id="msg">
+
+      </div>
+</body>
+</html>
+<script>
+    var m = 0;
+    function calcular() {
+        m = Number(renda.value);
+        if (m <0) {
+            msg.innerHTML = `Ta pobre hein`;
+            
+        }
+        else if (m <= 250) {
+            msg.innerHTML = `Classe E`;
+        }
+        else if (m <=900){
+            msg.innerHTML = `Classe D`;
+        }
+        else if (m <=2500){
+            msg.innerHTML = `Classe C`;
+        }
+        else if (m <=8500){
+            msg.innerHTML = `Classe B`;
+        }
+        else{
+            msg.innerHTML = `Classe A`;
+        }
+    }
+</script>
