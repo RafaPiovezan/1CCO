@@ -6,18 +6,21 @@ body{
 }
 
 .header{
-    border: 3px solid rgb(0, 201, 151);
+    border-bottom: 3px solid aqua;
 
 }
+.container{
+    display: flex;
+    
+    margin:auto ;
+    width: 80%;
+}
+
 .header .container{
-margin:auto ;
-width: 80%;
-border: 3px solid pink;
-display: flex;
-justify-content: space-between;
+    justify-content: space-between;
 }
 .header ul .aqui{
-    color:blue
+ font-weight: bold;
 }
 
 .cor{
@@ -26,15 +29,120 @@ justify-content: space-between;
 .navBar{
  text-decoration: none;
  list-style: none;
- border: 3px solid green;
+
  display: flex;
- color: orange;
+ color: rgb(255, 166, 0);
  justify-content: space-evenly;
  padding: 0;
  width: 300px;
  align-items: center;
 }
 .titulo{
-    border: 3px solid red;
+
     width: fit-content;
+}
+
+/* inicio do css do abnner
+*/
+
+
+.banner{
+    background-image: url("../imgs/bg-jelly-fish-para-home.png");
+    height: 500px;
+    color:#fff;
+    display: flex;
+
+}
+.banner .container p span{
+    font-weight: 1000;
+
+    
+}
+.banner .container {
+    font-size: 25px;
+   
+    justify-content: center;
+    
+}
+.banner .container p{
+    width: 10%;
+}
+
+/* Fim banner
+Inicio Social*/
+.social {
+    background-color: beige;
+    display: flex;
+}
+.social .container .boxes .box img{
+    width: 150px;
+}
+.social .container .boxes{
+    display: flex;
+}
+.box{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Final do social
+
+
+Inicio do Footer*/
+
+.footer {
+    background-color: rgb(3, 177, 177);
+    height: 300px;
+    display: flex;
+    color: white;
+
+}
+.footer .container{
+    justify-content: center;
+    font-size: 18px;
+}
+
+a{
+    color: rgb(255, 166, 0);
+    text-decoration: none;
+}
+
+/* Login */
+.banner .container .card{
+    background: rgba(255, 255, 255, 0.316) ;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    color: palevioletred;
+    align-items: center;
+    border-radius: 4px;
+    backdrop-filter: blur(15px);
+}
+
+.card h1{
+font-size: 30px;
+}
+.card h4{
+    font-size: 16px;
+}
+.card input{
+    border: palevioletred solid 2px;
+    padding: 10px;
+    border-radius: 4px;
+  
+}
+.card button{
+    margin-top: 40px;
+    background-color: palevioletred;
+    font-size: 20px;
+    height: 30px;
+    width: 100px;
+color:white;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    font: 700 20px monospace;
+  
 }

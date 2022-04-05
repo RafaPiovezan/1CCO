@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="cidade">
+        <option value="0">Selecionar</option>
+        <option value="1">SP-Capital</option>
+        <option value="2">SP-Interior</option>
+        <option value="3">Outros Estados</option>
+    </select>
+    <button onclick="verificar()">Falar Local</button>
+    <br> 
+    <div id="local">
+
+    </div>
+</body>
+</html>
+<script>
+   function verificar() {
+       var s = Number(cidade.value);
+
+       
+       if (s == 0) {
+           local.innerHTML =`<p style = "color:red;font-size:20px;font-weight:700">Por favor escolher uma opção</p>`;
+           
+       }  if(s == 1) {
+           local.innerHTML =`
+           <img src ="https://www.achetudoeregiao.com.br/sp/sao_paulo/gifs/sao_paulo.jpg" style = "width:30%">
+           <p>Os nascidos nesta cidade são Paulistanos</p>`;
+           
+       }if(s == 2) {
+           local.innerHTML =`
+           <img src ="https://www.viladonpatto.com.br/assets/uploads/blog/qyrq0gc2k7448gook8.png" style = "width:30%">
+           <p>Os nascidos neste estado são Paulistas</p>`;
+           
+       }if (s==3){
+           local.innerHTML =`
+           <img src ="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/03/cristo-redentor-como-visitar-precos-rio-de-janeiro-capa.jpg" style = "width:30%">
+           <p>Os nascidos neste lugar não são Paulistanos e nem Paulistas</p>`;
+           
+       }
+   }
+
+
+</script>

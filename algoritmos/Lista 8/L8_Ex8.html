@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Quantos pães o usuario consumiu por dia?</label><br><br>
+    <input type="text" name="" id="paes"> <br><br>
+    <label>Quantos pacotes de bolacha recheada o usuario consumiu por dia?</label> <br><br>
+    <input type="text" name="" id="bolacha"><br><br>
+    <label>Quantos copos de achocolatado  o usuario consumiu por dia?</label> <br><br>
+    <input type="text" name="" id="copo">
+<br><br>
+
+    <button onclick="ver()">Verificar calorias</button>
+
+    <div id="msg">
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    var p = 0;
+    var b =0;
+    var c = 0;
+
+    function ver() {
+        
+    p = Number(paes.value);
+    b = Number(bolacha.value);
+    c = Number(copo.value);
+
+
+        var calorias = (p*50) + (b*80) + (c*70);
+
+        if (calorias<50){
+            msg.innerHTML = `Você precisa comer`;
+        }else if (calorias <=200){
+            msg.innerHTML = `Parabéns, vai sair em forma da quarentena!`;
+        }else if(calorias<=400){
+
+            msg.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+        }else{
+            msg.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`;
+        }
+    }
+</script>
