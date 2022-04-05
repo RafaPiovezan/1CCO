@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="choose" onchange="aparecer()">
+        <option value="0">Selecione uma especie</option>
+        <option value="1">Oviparo</option>
+        <option value="2">Mamifero</option>
+    </select>
+
+
+    <br><br>
+    <div id="content" style="display:none">
+        <select name="" id="ovip" onchange="imagem()">
+            <option value="">Selecione</option>
+            <option value="https://blog.cobasi.com.br/wp-content/uploads/2021/08/quantos-anos-vive-uma-galinha-1-1.png">
+                Galinha</option>
+            <option
+                value="https://blog.cobasi.com.br/wp-content/uploads/2021/09/peixe-e-vertebrado-ou-invertebrado-topo.png">
+                Peixe</option>
+            <option value="https://cdn.diferenca.com/imagens/tartaruga-cagado-e-jabuti-og.jpg">Tartaruga</option>
+
+
+        </select>
+        <div id="img">
+
+        </div>
+        <div id="campo" style="display:none;">
+            <label for="">Valor de compra do animal</label>
+            <input type="text" name="" id="valor"> <br>
+            <button onclick="calcular()">Calcular Imposto</button>
+            <div id="valorzinho">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="content2" style="display:none">
+
+        <select name="" id="mamifero" onchange="imagem2()">
+            <option value="">Selecione</option>
+            <option value="https://dcom-prod.imgix.net/files/inline-images/2%20%281%29%20%281%29_0.jpg">Elefante
+            </option>
+            <option value="https://files.agro20.com.br/uploads/2019/03/racas-de-porco-02-1024x681.jpg">Porco</option>
+            <option value="https://blog.cobasi.com.br/wp-content/uploads/2021/01/mini-coelho-capa.png">Coelho</option>
+        </select>
+
+        <div id="img2">
+
+        </div>
+        <div id="campo2" style="display:none;">
+            <label for="">Valor de compra do animal</label>
+            <input type="text" name="" id="valor2"> <br>
+            <button onclick="calcular2()">Calcular Imposto</button>
+        </div>
+        <div id="valorzinho2">
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var select1 = 0;
+    var select2 = 0;
+    var select3 = 0;
+    var url = 0;
+    var url2 = 0;
+    var resultado= 0;
+    function aparecer() {
+        select1 = Number(choose.value);
+
+        if (select1 == 0) {
+            alert("Escolha 1 opção");
+            content.style.display = "none";
+            content2.style.display = "none";
+
+        } else if (select1 == 1) {
+            content.style.display = "block";
+            content2.style.display = "none";
+
+        } else {
+            content2.style.display = "block";
+            content.style.display = "none";
+        }
+    }
+    function imagem() {
+        url = ovip.value;
+
+        img.innerHTML = `<img src = "${url}" style = "width:30%">`;
+        campo.style.display = "block";
+
+    }
+    function imagem2() {
+        url2 = mamifero.value;
+
+        img2.innerHTML = `<img src = "${url2}" style = "width:30%">`;
+        campo2.style.display = "block";
+
+    }
+    function calcular() {
+
+        var v =Number(valor.value);
+        var imposto = v * 0.05;
+    resultado = resultado + imposto;
+        valorzinho.innerHTML = `<p style = "color:blue; font-size:15px">O valor do imposto sera de ${imposto}</p>`;
+    }
+    function calcular2() {
+
+        var v2 =Number(valor2.value);
+        var imposto2 = v2 * 0.1;
+        resultado = resultado + imposto2;
+        valorzinho2.innerHTML = `<p style = "color:blue; font-size:15px">O valor do imposto sera de ${imposto2}</p>`;
+    }
+
+
+</script>
