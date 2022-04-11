@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+
+<body>
+            <p>Login:</p>
+            <input type="text" name="" id="login">
+            <p>Senha:</p>
+            <input type="text" name="" id="senha">
+
+            <p>Informação Pessoal:</p>
+            <input type="text" id="informacao">
+
+            <button onclick="verificar()">Autenticar</button>
+</body>
+
+</html>
+<script>
+            var l = 0;
+            var s = 0;
+            var i = 0;
+           
+            function verificar() {
+                        var tentativa = 3;
+                        l = login.value;
+                        s = senha.value;
+                        i = informacao.value;
+
+                        if (l == "ana" && senha == "maria" && l == "1960" || l == "louro josé") {
+
+                                    resultado.innerHTML = `Usuario autenticado`;
+
+                        } else {
+                                    tentativa = tentativa - 1;
+                                    resultado.innerHTML = `Usuario não autenticado`;
+
+                                    if (tentativa == 0) {
+                                                resultado.innerHTML = `Usuário BLOQUEADO! Procure seu gerente!`;
+                                    } else {
+                                                resultado.innerHTML = `Usuario autenticado`;
+                                    }
+                        }
+            }
+</script>

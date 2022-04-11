@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <header>
+                        <ul>
+                                    <li><a href="aprendendo.html">Aprendendo</a></li>
+                                    <li><a href="Ex1.html">Exercicio 1</a></li>
+                                    <li><a href="Ex3.html">Exercicio 3</a></li>
+                                    <li><a href="Ex4.html">Exercicio 4</a></li>
+                                    <li><a href="Ex5.html">Exercicio 5</a></li>
+                                    <li><a href="Ex6.html">Exercicio 6</a></li>
+                                    <li><a href="Ex9.html">Exercicio 9</a></li>
+                                    <li><a href="Ex14.html">Exercicio 14</a></li>
+                                    <li><a href="Ex18.html">Exercicio 18</a></li>
+                                    <li><a href="Ex19.html">Exercicio 19</a></li>
+                        </ul>
+            </header>
+            <select name="" id="forma">
+                        <option value="1">Dinheiro</option>
+                        <option value="2">Cartão de debito</option>
+                        <option value="3">Cartão de Crédito </option>
+                        <option value="4">Boleto</option>
+            </select>
+            <button onclick="analisar()">Analisar Compra</button>
+<div id="resultado">
+
+</div>
+</body>
+</html>
+
+<script>
+            function analisar() {
+                        var f = forma.value;
+
+                        if (f == 1 || f == 2) {
+                                    resultado.innerHTML = `Você tera que pagar a vista`
+                        }else{
+                                    resultado.innerHTML = `Pagamento poderá ser parcelado`
+                        }
+            }
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+
+</head>
+<body>
+            <header>
+                        <ul>
+                                    <li><a href="aprendendo.html">Aprendendo</a></li>
+                                    <li><a href="Ex1.html">Exercicio 1</a></li>
+                                    <li><a href="Ex3.html">Exercicio 3</a></li>
+                                    <li><a href="Ex4.html">Exercicio 4</a></li>
+                                    <li><a href="Ex5.html">Exercicio 5</a></li>
+                                    <li><a href="Ex6.html">Exercicio 6</a></li>
+                                    <li><a href="Ex9.html">Exercicio 9</a></li>
+                                    <li><a href="Ex14.html">Exercicio 14</a></li>
+                                    <li><a href="Ex18.html">Exercicio 18</a></li>
+                                    <li><a href="Ex19.html">Exercicio 19</a></li>
+                        </ul>
+            </header>
+            <h1>Qual o sabor de picole</h1>
+
+            <select name="" id="sabor">
+                        <option value="1">Espinafre</option>
+                        <option value="2">Morango</option>
+                        <option value="3">Feijoada</option>
+                        <option value="4">Chocolate</option>
+                        <option value="5">Terra&Tijolo</option>
+            </select>
+            <button onclick="picole()">Vou tomar o picole?</button>
+
+            <div id="resultado">
+
+            </div>
+</body>
+</html>
+
+<script>
+            var s=0;
+
+            function picole() {
+                        s = sabor.value;
+
+                        if ( s == 2 || s ==4) {
+                                    resultado.innerHTML = `<p>Opa, vou tomar picolé</p>`;
+                        }else{
+                                    resultado.innerHTML = `<p>Não vou tomar picolé</p>`
+
+                        }
+            }
+</script>

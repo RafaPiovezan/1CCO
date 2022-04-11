@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <p>Por favor insira sua nota:</p>
+            <input type="text" name="" id="nota">
+            <p>Por favor insira sua frenquencia:</p>
+            <input type="text" id="frequencia">
+            <button onclick="verificar()">Analisar Aluno</button>
+            <div id="resultado"></div>
+</body>
+</html>
+<script>
+            var n = 0;
+            var f = 0;
+
+            function verificar() {
+                        n = nota.value;
+                        f = frequencia.value;
+
+                        if (n <0 || n >10 || f <0 || f>100) {
+                                    resultado.innerHTML =` valores invalidos foram inseridos`;
+                        }else if (n >= 0 && n <=6 && f >=75){
+                                    resultado.innerHTML = `Aluno abaixo da media
+                                    <br> Aluno aprovado por frequencia  `;
+                        }else if (n>6 && n <=8 &&  f >=75){
+                                    resultado.innerHTML = `Aluno ficou na media `;
+                        }else if (n > 8  && n<=10 &&  f >=75){
+                                    resultado.innerHTML = `Aluno ficou acima da  media `;
+                        } 
+                        else {
+                                    resultado.innerHTML = `Aluno Reprovado por frequencia `;
+                        }
+            }
+</script>
