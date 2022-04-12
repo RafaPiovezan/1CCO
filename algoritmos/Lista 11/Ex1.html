@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Login</p>
+    <input type="text" id="login">
+    <p>Senha</p>
+    <input type="text" id="senha">
+ <br> <br>
+    <button onclick="verificar()">Entrar</button>
+<br> <br>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function verificar() {
+        var l = login.value && login.value == 'aidimin';
+        var s = senha.value && senha.value == 'seinha';
+
+        if (l == true  && s == true){
+            resultado.innerHTML = `Usuario Logado`;
+        }else if(l == true && s == false){
+            resultado.innerHTML = `Sua senha está inválida!`;
+            alert ("Entre em contato com o suporte para recuperar sua senha")
+        }
+        else if( l ==false && s == true){
+            resultado.innerHTML = `Seu login está inválido!`;
+        }else{
+            resultado.innerHTML = `Seu login está inválido! <br>Sua senha está inválida! `;
+        }
+    }
+</script>

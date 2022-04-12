@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>insira sua nota</p>
+    <input type="text" name="" id="nota">
+    <p>insira sua frequencia</p>
+    <input type="text" name="" id="frequencia">
+
+    <button onclick="avalia()">Avaliar</button>
+    <div id="resultado">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function avalia() {
+        var n = nota.value <6;
+        var f = frequenci.value <75;
+
+        if (n) {
+            resultado.innerHTML += `<p>Reprovado(a) por nota</p>`
+            
+        }
+    }
+</script>

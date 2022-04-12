@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <label>Insira sua altura (em cm):</label>
+    <input type="text" id="altura">
+    <button onclick="analisar()">Analisar para esportes</button>
+
+    <div id="resultado">
+
+    </div>
+</body>
+</html>
+
+<script> function analisar() {
+    var a  =  altura.value<160;
+    var maxima = altura.value >=160 && altura.value <185
+     if (a){
+         resultado.innerHTML = `<p>Pode tentar ser piloto(a) de corrida</p>
+         <p>Pode tentar ser velejador(a)</p>`
+     }else if(maxima){
+         resultado.innerHTML= `<p>Pode tentar ser jogador de futebol ou handbol</p>`
+     }else{
+        resultado.innerHTML= `<p>Não pode ser nada</p>`
+     }
+
+}
+
+</script>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula40b-Bollean</title>
+</head>
+
+<body>
+    <!-- 
+        Receber a idade da pessoa e informar os estágios pelo qual essa pessoa já passou da seguinte forma:
+            Já passou pela infância: true/false
+            Já passou pela adolescência: true/false
+            Já é um idoso: true/false
+                TOTAL DE PONTOS: 99
+        Sendo que a infância é até os 12 anos, adolescência até os 18 anos, e o idoso é a partir dos 65 anos. 
+        Se já passou pela infância ganha 10 pontos, se já passou pela adolescência ganha 20 pontos 
+            e se é um idoso ganha 50 pontos     
+    -->
+    <h3>Variável Booleana</h3>
+    Entre com a idade:
+    <input id="idade" placeholder="idade"> <br><br>
+    <div>
+        Já passou pela infância: <b id="crianca">?</b> <br>
+        Já passou pela adolescência: <b id="adolescente">?</b> <br>
+        Já é um idoso: <b id="idoso">?</b>
+    </div>
+    <br><br>
+    Total de Pontos = <b id="resultado"></b>
+    <br><br>
+    <button onclick="analisar()">Analisar Idade</button>
+
+</body>
+
+</html>
+<script>
+    function analisar() {
+
+        var inf = Number(idade.value) >12;
+        var ado = Number(idade.value) >18;
+        var ido = Number(idade.value) >= 65;
+        crianca.innerHTML = inf;
+        adolescente.innerHTML = ado;
+        idoso.innerHTML = ido;
+
+        var pontos = 0;
+        if (inf) {
+            pontos += 10;
+        }
+        if (ado) {
+            pontos += 20;
+        }
+        if (ido){
+            pontos += 50;
+        }
+        resultado.innerHTML = pontos;
+    }
+
+</script>
