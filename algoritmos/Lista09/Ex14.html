@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="salvar" style="display:block">
+        <p>Qual a altura maxima de um piloto?</p>
+        <input type="text" name="" id="AltMaxpi">
+        <p>Qual a altura minima de um piloto?</p>
+        <input type="text" name="" id="AltMinpi">
+
+        <br> <br> <br>
+        <p>Qual a altura maxima de um Jogador?</p>
+        <input type="text" name="" id="AltMaxJ">
+        <p>Qual a altura minima de um Jogador?</p>
+        <input type="text" name="" id="AltMinJ">
+
+
+
+        <button onclick="verificar()">Selecionar</button>
+    </div>
+
+<div id="Ndiv" style="display: none;">
+    <h1>Processo de Seleção de novos atletas</h1>
+	<p>Critério de Seleção de piloto – altura entre 9,99 até 9,99</p>
+	<p>Critério de Seleção de jogador de basquete – altura entre 9,99 até 9,99</p> 
+<br>
+<p>Seu nome:</p>
+<input type="text" id="nome">
+<p>Sua altura:</p>
+<input type="text" id="altura">
+<br> <br>
+    <select name="" id="selecao" >
+        <option value="0">Selecionar</option>
+        <option value="1">Piloto</option>
+        <option value="2">Jogador</option>
+    </select>
+<br><br>
+    <button onclick="executar()">verificar</button>
+</div>
+  
+<div id="resultado">
+
+</div>
+
+</body>
+</html>
+
+<script>
+    var  p_a_max = 0;
+    var p_a_min= 0;
+    var j_a_min = 0;
+    var j_a_max = 0;
+    var alt = 0;
+    var selec = 0
+    function verificar() {
+        p_a_max = Number(AltMaxpi.value);
+        p_a_min=   Number(AltMinpi.value);
+        j_a_max = Number(AltMaxJ.value);
+        j_a_min = Number(AltMinJ.value);
+        
+
+        if (p_a_min < 1 || p_a_max <= p_a_min || j_a_min < 1.5 || j_a_max <= j_a_min) {
+            alert ("A altura não corresponde a altura necessaria ");
+        }
+        else{
+            salvar.style.display = "none";
+                Ndiv.style.display = "block";
+        }
+    }
+    function executar() {
+     selec = selecao.value;
+        var n = nome.value;
+        alt = Number(altura.value);
+        p_a_max = Number(AltMaxpi.value);
+        p_a_min=   Number(AltMinpi.value);
+        j_a_max = Number(AltMaxJ.value);
+        j_a_min = Number(AltMinJ.value);
+if (selec == 1) {
+    if (alt > p_a_min && alt <= p_a_max) {
+        resultado.innerHTML = `<p> O candidato ${n} com altura de ${alt} participará do processo de seleção de piloto </p>`
+    }
+    else{
+    resultado.innerHTML = `<p> Infelismente o candidato ${n} com altura de ${alt} não atende os requisitos</p>`
+}
+}
+else if (selec == 2) {
+    if (alt > j_a_min && alt <= j_a_max) {
+        resultado.innerHTML = `<p> O candidato ${n} com altura de ${alt} participará do processo de seleção de Jogador</p>`
+    }
+    else{
+    resultado.innerHTML = `<p> Infelismente o candidato ${n} com altura de ${alt} não atende os requisitos</p>`
+
+}
+}else{
+    resultado.innerHTML = " ";
+}
+
+
+
+    }
+
+
+</script>
