@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="opcao">
+        <option value="0">Selecione</option>
+        <option value="1">Arroz Branco</option>
+        <option value="2">Arroz Integral</option>
+    </select>
+    <br>
+    <p>Tempo de cozimento</p>
+    <input type="text" name="" id="tempo">
+
+    <p>Quantidade de sal usado em gramas</p>
+    <input type="text" name="" id="sal">
+
+    <br>
+    <button onclick="avaliar()">Avaliar arroz</button>
+</body>
+</html>
+
+<script>
+    function avaliar() {
+        var select = opcao.value;
+        var t = Number(tempo.value);
+        var s = Number(sal.value);
+
+        if (select == 1 && t == 10 && s <=10 || select == 2 && t == 20 && s <=15) {
+            alert("Arroz Perfeito");
+        }else{
+            alert("Seu arroz não está perfeito");
+        }
+    }
+</script>
