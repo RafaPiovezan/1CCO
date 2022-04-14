@@ -458,7 +458,9 @@ height: 100vh;
 }
 #diagramas {
     margin-top: 5vw;
-    
+    text-align: center;
+    font: 400 30px 'poppins';
+    color: #004455;
 }
 #diagramas .container{
     display:flex;
@@ -466,10 +468,17 @@ height: 100vh;
     justify-content: space-around;
 
 }
-
-#diagramas .container #lm35Temperatura,#diagramas .container #lm35Temperatura2{
+#diagramas .container section{
+    padding: 1rem;
+}
+.tamanho{
     width: 33vw;
     height: 40vh;
     background-color: #e7e7e7;
+    margin-top: 5vw;
 
+}
+
+#footer.dashboard {
+    margin-top: 5vw;
 }
