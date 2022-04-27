@@ -67,31 +67,34 @@ padding-top: 10vh;
 background-image: url(imagens/banner.jpg);
 background-size: cover;
 color: #fff;
-height: 75vh;   
+height: min-content;   
 border-bottom:5px solid #004860 ;
 display: flex;
 justify-content: center;
 align-items: center;
 
-
 }
 #banner .box {
     background-color: rgba(0, 0, 0, 0.555);
-    border-radius: 5px;
+  
     font-family: sans-serif;
     text-align: center;
     line-height: 1;
    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(2px);
     width: 100vw;
-    height: 69vh;
-    padding: 20px 40px;
-    
+
+   
+
   }
 
+  #home #banner .box{
+    height: 40vw;
+    
+}
 
 #banner .container{
-    height: 55vh;
+
     width: 95vw;
     font-size: 25px;
     justify-content: space-around;
@@ -128,6 +131,7 @@ align-items: center;
 
 
 #values{
+    margin-top: 4vw;
     border-bottom:5px solid #004860 ;
     display: flex;
 }
@@ -138,8 +142,8 @@ align-items: center;
     display: flex;
 }
 .card{
-    margin-top:7vw;
-    margin-bottom:7vw;
+  
+    margin-bottom:4vw;
     display: flex;
     flex-direction: column;
 
@@ -361,7 +365,6 @@ justify-content: space-between;
 
 
 
-
 #login #banner .container .card {
     background-color: rgb(240, 240, 240);
     height: 400px;
@@ -377,11 +380,9 @@ justify-content: space-between;
     font-size: 30px;
     margin-bottom: 1vw;
 }
-#login #banner{
-height: 100vh;
-}
+
 #login #banner .box{
-    padding-top: 13vw;
+    padding-top: 7vw;
 }
 #login #banner .container .card h4 {
     margin-top:2vw;
@@ -415,7 +416,7 @@ height: 100vh;
 }
 #login #banner.cadastro .container .card{
     background-color: rgb(240, 240, 240);
-    height: 600px;
+    height: fit-content;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -424,12 +425,9 @@ height: 100vh;
     border-radius: 4px;
     
 }
-#login #banner.cadastro{
-    height: 850px;
-}
 #login #banner.cadastro .box{
-    padding-top: 18vw;
-    height: 600px;
+    padding-top: 7vw;
+  
 }
 #login #banner.cadastro .card p{
     margin-top: 1vw;
