@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div style="display: flex; justify-content: space-between;">
+        <div>
+            <h4>Os valores disponiveis em cedulas são 10,50 e 100</h4>
+            <label for="">Indique o valor desejado</label>
+            <input type="text" id="quantidade">
+
+            <button onclick="validar()">Solicitar saque</button>
+
+            <span id="resultado">
+
+            </span>
+        </div>
+        <div style="border: 3px solid black;padding: 1vw;">
+            <span>Valor na maquina: </span>
+            <span id="maquina">
+
+            </span>
+            <br> <br>
+            <span>Saques realizados</span>
+            <span id="saques">
+
+            </span>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    var valor = 1000;
+    var s = 0;
+    var quant = 0;
+    maquina.innerHTML = `<b>${valor}</b>`;
+    saques.innerHTML = `<b>${s} </b>`;
+
+    function validar() {
+
+        quant = Number(quantidade.value);
+
+        if (quant <= 0) {
+            resultado.innerHTML = `Não é possível sacar 0 ou menos, dãaaa!`;
+
+        } else {
+
+
+
+            if (quant % 10 == 0) {
+                if (valor >= quant) {
+                    valor = valor - quant;
+                    s++;
+                    resultado.innerHTML = "Retire o dinheiro no local indicado";
+                    maquina.innerHTML = `<b>${valor}</b>`;
+
+                    saques.innerHTML = `<b>${s} </b>`;
+
+                } else {
+                    resultado.innerHTML = "Valor solicitado maior que o disponível na máquina";
+
+                }
+            } else {
+                resultado.innerHTML = "Valor não possível devido às notas disponíveis";
+            }
+
+        }
+
+    }
+</script>

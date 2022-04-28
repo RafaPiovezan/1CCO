@@ -99,19 +99,19 @@
         if (escolha == 0) {
         alert("Escolha um tipo de combustivel por favor!!");
         }
-        else if (escolha == 1 && gas > 0) {
+        else if (escolha == 1 && gas >= quantidade) {
             gas =gas - quantidade;
             vendaG= vendaG + 1;
           totalG = totalG + quantidade;
             resposta.innerHTML += `Com a venda de ${quantidade} de gasolina o saldo no tanque é de ${gas} <br> <br>`;
         }
-        else if (escolha == 2 && eta > 0) {
+        else if (escolha == 2 && eta >= quantidade) {
             eta =eta - quantidade;
             vendaE= vendaE + 1;
            totalE = totalE + quantidade;
             resposta.innerHTML += `Com a venda de ${quantidade} de etanol o saldo no tanque é de ${eta} <br> <br>`;
         }else{
-            alert ("O combustivel selecionado acabou!");
+            alert ("A quantidade solictada é maior que a disponivel no tanque!");
         }
 
 

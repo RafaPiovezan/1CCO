@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inicio" placeholder="escolha um numero inical" min="5">
+
+    <input type="text" id="fim" placeholder="escolha um numero final" min="5">
+
+    <button onclick="gerar()">Gerar</button>
+    <br>
+    <span id="numeros"></span>
+</body>
+
+</html>
+<script>
+    var f = 0;
+    var ini = 0;
+
+    function gerar() {
+        ini = inicio.value;
+        f = fim.value;
+        while (ini <= f) {
+            numeros.innerHTML += `${ini} <br>`;
+            ini++;
+        }
+    }
+</script>

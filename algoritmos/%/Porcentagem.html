@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Insira um numero</label>
+    <input type="text" name="" id="numero">
+
+    <button onclick="verificar()">é divisivel por 7?</button>
+
+</body>
+</html>
+<script>
+    var num= 0;
+  
+    function verificar() {
+        num = numero.value % 7;
+        if (num == 0) {
+            alert("Sim, é divisivel");
+        }else{
+            alert("Não é divisivel");
+        }
+        
+    }
+</script>
