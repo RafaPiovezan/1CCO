@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="p1">
+        <label for="">Quantidade de Etanol</label>
+        <input type="text" name="" id="etanol">
+        
+        <br><br>
+        <label for="">Quantidade de gasolina</label>
+        <input type="text" name="" id="gasolina">
+        <br> <br>
+        <button onclick="abrir()">Abrir Posto</button>
+    </div>
+
+    <div id="p2" style="display: none;">
+        <label for="">Quantidade de combustivel vendido em litros</label>
+        <input type="text" name="" id="qntd">
+        <br>
+        <br>
+        <select name="" id="tipo">
+            <option value="0">Selecione</option>
+            <option value="1">gasolina</option>
+            <option value="2">Etanol</option>
+        </select>
+        <br>
+<br>
+        <button onclick="registrar()">Registrar venda</button>
+        <button onclick="encerrar()">Encerrar Turno</button>
+        <br>
+        <br>
+
+        <span id="resposta">
+
+        </span>
+    </div>
+
+    <div id="p3" style="display: none;">
+
+        <br> <br>
+       
+
+
+      
+    </div>
+    <span id="final"> 
+
+    </span>
+</body>
+</html>
+
+<script>
+    var vendaG = 0;
+    var vendaE = 0;
+    var gas = 0;
+    var eta=0;
+    var quantidade = 0;
+    var escolha = 0;
+    var totalE = 0;
+    var totalG = 0;
+    var total = 0
+
+    function abrir() {
+        gas = Number(gasolina.value);
+        eta = Number(etanol.value);
+
+       if (gas >=200 && gas <=2000 && eta >=300 ) {
+           alert("AVISO - Chame o reabastecimento de Gasolina");
+            p2.style.display = "block";
+            p1.style.display = "none";
+       }else if(eta >=300 && eta <=3000 && gas >=200){
+        alert("AVISO - Chame o reabastecimento de Etanol");
+            p2.style.display = "block";
+            p1.style.display = "none";
+
+       }   else if (gas <200 || eta < 300){
+           alert ("ERRO - Com esse volume de Etanol não dá para abrir o posto");
+       }else {
+            p2.style.display = "block";
+            p1.style.display = "none";
+       }
+
+   
+        
+    }
+    function registrar (){
+        escolha = tipo.value;
+        quantidade = Number(qntd.value);
+        
+        if (escolha == 0) {
+        alert("Escolha um tipo de combustivel por favor!!");
+        }
+        else if (escolha == 1 && gas >= quantidade) {
+            gas =gas - quantidade;
+            vendaG= vendaG + 1;
+          totalG = totalG + quantidade;
+            resposta.innerHTML += `Com a venda de ${quantidade} de gasolina o saldo no tanque é de ${gas} <br> <br>`;
+        }
+        else if (escolha == 2 && eta >= quantidade) {
+            eta =eta - quantidade;
+            vendaE= vendaE + 1;
+           totalE = totalE + quantidade;
+            resposta.innerHTML += `Com a venda de ${quantidade} de etanol o saldo no tanque é de ${eta} <br> <br>`;
+        }else{
+            alert ("A quantidade solictada é maior que a disponivel no tanque!");
+        }
+
+
+    }
+    function encerrar() {
+     
+        p3.style.display = "block"
+        p2.style.display = "none"
+        p3.innerHTML = `
+        <p> <b>Venda de Etanol</b></p>
+
+        <p>Saldo de produto no tanque = ${eta}</p>
+
+        <p>Volume total vendido = ${totalE}</p>
+
+        <p>Quantidade de vendas = ${vendaE}</p>
+
+        <p>Média das vendas = ${(totalE/vendaE).toFixed(1)} </p>
+        <br> <br> 
+        <p><b> Venda de Gasolina</b></p>
+
+        <p>Saldo de produto no tanque = ${gas}</p>
+
+        <p>Volume total vendido = ${totalG} </p>
+
+        <p>Quantidade de vendas = ${vendaG}</p>
+
+        <p>Média das vendas = ${(totalG/vendaG).toFixed(1)} </p>
+        
+        
+        
+        `;
+
+        if (totalE >= 1500 && totalG >= 1000  || eta <300 || gas <200) {
+            final.innerHTML = "<b>O turno foi BOM</b>"
+        }else {
+            final.innerHTML = "<b>O turno foi NORMAL</b>"
+        }
+
+
+    }
+</script>
