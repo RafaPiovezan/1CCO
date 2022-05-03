@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <label for="">Insira o 1° numero</label>
+<input type="text" name="" id="num1">
+            <label for="">Insira o 2° numero</label>
+            <input type="text" name="" id="num2">
+            <button onclick="verificar()">verificar</button>
+            <div id="resultado"></div>
+</body>
+</html>
+<script>
+            var n1 = 0;
+            var n2 = 0;
+            var n =0;
+
+            function verificar() {
+                        n1 = num1.value;
+                        n2= num2.value;
+
+                        if (n1<n2) {
+                                    while (n1 < n2){
+                                               if (n1 % 2 == 0) {
+                                                           resultado.innerHTML +=`O número ${n1} é divisível por 2  `;
+                                                           n++;
+                                               } 
+                                                if (n1 % 3 == 0) {
+                                                           resultado.innerHTML +=`O número ${n1} é divisível por 3  `;
+                                                           n++;
+                                               }if (n1 % 5 == 0) {
+                                                           resultado.innerHTML +=`O número ${n1} é divisível por 5  `;
+                                                           n++;
+                                               } if (n1 % 7 == 0) {
+                                                           resultado.innerHTML +=`O número ${n1} é divisível por 7 `;
+                                                           n++;
+                                               }if (n1 % 11== 0) {
+                                                           resultado.innerHTML +=`O número ${n1} é divisível por 11 `;
+                                                           n++;
+                                               }if (n1 % 13 == 0) {
+                                                           resultado.innerHTML +=`O número ${n1} é divisível por 13 `;
+                                                           n++;
+                                               }else if (n1 % 2 !=0 && n1 % 3 !=0 && n1 % 5 !=0 && n1 % 7 !=0 && n1 % 11 !=0 && n1 % 13 !=0 ){
+                                                resultado.innerHTML +=`O número ${n1} não é divisivel por nenhum dos principais numeros primos `;
+                                               }
+                                               resultado.innerHTML += `<br>`;
+                                               n1++;
+                                    }
+                                    
+                                    resultado.innerHTML += `<b>O intervalo de ${num1.value} a ${num2.value} tem ${ num2 .value - num1.value} números, sendo que ${n} números são divisíveis por algum número primo</b>`;
+                        }else{
+                                    resultado.innerHTML =`O 1° valor não pode ser maior que o segundo `;
+                        }
+            }
+</script>

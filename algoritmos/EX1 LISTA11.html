@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>ex 1 lista 11</title>
+</head>
+<body>
+            <h2>Login:</h2>
+            <input id="usuario" placeholder="digite seu login"> <br><br>
+            <h2>Senha:</h2>
+            <input  id="passe" placeholder="digite sua senha" type="password"> <br><br>
+            <button onclick="calculo()">Entrar</button> <br><br>
+            <span id="resultado"></span>
+            
+</body>
+</html>
+<script>
+            function calculo() {
+                        var int = usuario.value== 'aidimin' 
+                        var ka= passe.value == 'seinha'
+            if (int && ka) {
+                     resultado.innerHTML+= '<span style="color: blue;">Usuário autenticado com sucesso!</span>'   
+            }else if (int ) {
+                        alert('Entre em contato com o suporte para recuperar sua senha')
+            }
+            
+            else {
+                        resultado.innerHTML+='Seu login está inválido! Sua senha está inválida!'
+            }
+            }
+
+
+
+</script>

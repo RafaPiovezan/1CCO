@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXIDOSO</title>
+</head>
+
+<body>
+   <center>
+
+               Idade:
+               <input id="ipt1" placeholder="Digite a Idade"> <br>
+               <div>
+                         Passou pela infância?: <span id="infa"></span> <br>
+                        Passou pela adolescência?: <span id="adole"></span> <br>
+                         É um idoso?: <span id="ido"></span>
+                        </div>
+                        <br>
+                        Pontos = <span id="point"></span>
+                        <br>
+                        <button onclick="calculo()">Analise dos pontos</button>
+                        
+            </center>
+            </body>
+            
+            </html>
+            <script>
+        function calculo() {
+        var int = ipt1.value > 12;
+        var ac = ipt1.value > 18;
+        var kd = ipt1.value >= 65;
+        infa.innerHTML = int;
+        adole.innerHTML = ac;
+        ido.innerHTML = kd;
+
+        var result = 0;
+        if (int) {
+            result += 10;
+        }
+        if (ac) {
+            result += 20;
+        }
+        if (kd){
+            result += 50;
+        }
+        point.innerHTML = result;
+    }
+
+</script>

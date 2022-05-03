@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <label for="">Quantos onibus?</label>
+            <input type="text" name="" id="onibus">
+            <label for="">Quantos trens?</label>
+            <input type="text" name="" id="trem">
+            <label for="">Quantos metros?</label>
+            <input type="text" name="" id="metro">
+
+            <button onclick="trajeto()">#PartiuTrajeto</button>
+
+            <div id="alertas"></div>
+</body>
+</html>
+
+<script>
+            var o =0;
+            var t= 0 ;
+            var m = 0;
+            var i = 1;
+            var i2 = 1;
+            var i3 = 1;
+            function trajeto(params) {
+                        o = onibus.value;
+                        t = trem.value;
+                        m = metro.value;
+
+                        while (i <= o){
+                                    alertas.innerHTML += `<p style = "color:red">Pegando ${i}° onibus </p>`;
+                                    i++;
+                        }    while (i2 <= t){
+                                    alertas.innerHTML += `<p style = "color:green">Pegando ${i2}° trem</p>`;
+                                    i2++;
+                        }    while (i3 <= m){
+                                    alertas.innerHTML += `<p style = "color:blue" > Pegando ${i3}° metro </p>`;
+                                    i3++;
+                        }
+            }
+</script>

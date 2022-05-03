@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <label for="">Quantas pessoas iram entrar?</label>
+            <input type="text" name="" id="pessoas">
+            <label for="">Qual  a capacidade do carro?</label>
+            <input type="text" name="" id="capacidade">
+            <button onclick="contar()">#PartiuCarona</button>
+            <div id="laco">
+
+            </div>
+</body>
+</html>
+<script>
+var pessoa = 0;
+var c= 0;
+var i = 1;
+function contar() {
+            pessoa = Number(pessoas.value);
+            c =capacidade.value
+            while (i <=pessoa){
+
+                        if (i <= c) {
+                                    if (i == 1) {
+                                                laco.innerHTML += ` A ${i}° pessoa entrara no carro, o motorista<br>`;
+                                    }else{
+                                                laco.innerHTML += ` A ${i}° pessoa entrara no carro <br>`;
+                                    }
+                                    
+                        }else{
+                                    laco.innerHTML += `A ${i}° pessoa esperara o proximo carro <br>`;
+                        }
+                        i++;
+            }
+}
+
+</script>
