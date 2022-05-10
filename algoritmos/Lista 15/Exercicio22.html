@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Limite inferior</label>
+    <input type="text" name="" id="inferior" placeholder="numeros maiores que 1"> <br> <br>
+    <label for="">Limite superior</label>
+    <input type="text" name="" id="superior" placeholder="numeros menores que 100"> <br><br>
+    <label for="">Divisor</label>
+    <input type="text" name="" id="divisor" placeholder="numero entre 3 e 10"><br><br>
+
+    <button onclick="divisibilidade()">Contar</button>
+
+    <div id="numero">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+
+function divisibilidade() {
+    var i = Number(inferior.value);
+    var s = Number(superior.value);
+    var d = Number(divisor.value);
+    var soma = 0;
+  var total = 0;
+var menor = 0;
+var maior = 0;
+    if (i < 2) {
+        alert ("Numero inferior deve ser maior do que 1");
+    }if (s >100){
+        alert ("Numero superior deve ser menor do que 100");
+    }if (d < 3 || d > 10) {
+        alert ("Divisor deve estar entre 3 e 10");
+
+
+    }else if(i > 1 && s < 100 && d >=3 && d <= 10){
+    for(var cont = i ; cont <= s; cont++){
+
+      
+       
+        if (cont % d == 0) {
+            numero.innerHTML += `${cont} <br>`;
+            soma = soma + Number(cont);
+            total = total + 1;
+            maior = cont;
+
+            if (total == 1) {
+                menor = cont;
+            }
+        
+        }
+    }
+    numero.innerHTML += `
+    <p>QUANTIDADE TOTAL DE NÚMEROS EXIBIDOS: ${total}</p>
+
+    <p>SOMATÓRIO DOS NÚMEROS EXIBIDOS: ${soma}</p>
+
+    <p>MÉDIA DOS NÚMEROS EXIBIDOS: ${soma/total}</p>
+
+    <p>MAIOR NÚMERO EXIBIDO: ${maior}</p>
+
+    <p>MENOR NÚMERO EXIBIDO: ${menor}</p>`
+
+}
+}
+
+</script>
