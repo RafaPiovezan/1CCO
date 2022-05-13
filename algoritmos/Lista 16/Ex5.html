@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Filme Favorito</label> 
+    <input type="text" name="" id="filme">
+    <button onclick="add()">Adicionar</button>
+
+    <br><br>
+
+    <div id="favs">
+        
+</div>
+
+
+</body>
+</html>
+
+<script>
+     var f = [];
+    favs.innerHTML += `
+    <p>O seu filme favorito é: Ainda não existe</p>
+    <p>O seu 3° filme favorito é: Ainda não existe</p>
+    <p>Total filmes cadastrados: ${f.length}</p>`;
+    
+function add() {
+   
+    f.push(filme.value);
+    filme.value = '';
+
+    favs.innerHTML = `
+    <p>O seu filme favorito é: ${f[f.length-1]}</p>
+    <p>O seu 3° filme favorito é: ${f[2]}</p>
+    <p>Total filmes cadastrados: ${f.length}</p>`;
+
+   
+}
+
+    
+</script>

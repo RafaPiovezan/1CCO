@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Filme Favorito</label> 
+    <input type="text" name="" id="filme">
+    <button onclick="add()">Adicionar</button>
+
+    <br><br>
+
+    <div id="favs">
+        
+</div>
+
+
+</body>
+</html>
+
+<script>
+     var f = [];
+
+function add() {
+   
+    f.push(filme.value);
+    filme.value = '';
+    favs.innerHTML += `${f[f.length-1]} <br>`;         
+        
+   
+}
+
+    
+</script>

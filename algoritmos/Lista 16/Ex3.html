@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Bairro</label> 
+    <input type="text" name="" id="bairro">
+    <button onclick="add()">Adicionar</button>
+
+    <br><br>
+
+    <div id="lugares">
+        <label>Bairro que deseja relembrar</label> 
+        <input type="text" name="" id="posicao">
+<button onclick="relembrar()">Relembrar Moradia</button>
+<br><br>
+ <span id="posicoes">
+
+ </span>
+</div>
+
+
+</body>
+</html>
+
+<script>
+     var b = [];
+    
+function add() {
+   
+    b.push(bairro.value);
+    bairro.value = '';
+}
+    
+  
+ var p = 0
+    function relembrar() {
+
+        if (b[p-1]==undefined) {
+            posicoes.innerHTML += `Ainda não existe <br>`
+        }else{
+        p = posicao.value
+        posicoes.innerHTML += `O ${p}° bairro informado foi ${b[p-1]} <br>`
+        }
+     
+    }
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Destino da viagem</label> 
+    <input type="text" name="" id="locais">
+    <button onclick="add()">Adicionar</button>
+
+    <br><br>
+
+    <div id="lugares">
+<button onclick="primeira()">Primeira Viagem</button>
+<button onclick="terceira()">Terceira Viagem</button>
+
+<button onclick="ultima()">Ultima Viagem</button> <br><br>
+ <span id="posicoes">
+
+ </span>
+</div>
+
+
+</body>
+</html>
+
+<script>
+     var l = [];
+    
+function add() {
+   
+    l.push(locais.value);
+    locais.value = '';
+}
+    
+    function primeira() {
+        posicoes.innerHTML += `Primeira viagem : ${l[0]} <br>`
+
+      
+    }
+    function terceira() {
+        posicoes.innerHTML += `Terceira viagem : ${l[2]} <br>`
+
+     
+    }
+    function ultima() {
+        posicoes.innerHTML += `Ultima viagem : ${l[l.length-1]} <br>`
+
+     
+    }
+</script>
