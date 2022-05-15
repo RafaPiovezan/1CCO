@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Informe quantos depositos:</label>
+    <input type="text" name="" id="depositos">
+    <br><br>
+    <label for="">Informe quantos depositos:</label>
+    <input type="text" name="" id="quantidade">
+    <br><br>
+    <button onclick="acompanhar()">Acompanhar grana</button>
+    <br><br>
+    <div id="resultado"></div>
+</body>
+
+</html>
+
+
+<script>
+
+    function acompanhar() {
+        var d = depositos.value;
+        var q = Number(quantidade.value);
+        var total =q;
+        for (var i = 1; i <= d; i++) {
+        
+            if (i % 3 == 0) {
+                total = total * 1.01;
+                resultado.innerHTML += `${i}° mês: ${total} <br>`
+                total = total + q;
+            } else {
+                resultado.innerHTML += `${i}° mês: ${total} <br>`
+                total = total + q;
+            }
+        }
+    }
+</script>

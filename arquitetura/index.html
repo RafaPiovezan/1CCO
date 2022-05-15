@@ -1,15 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
- <div id="jogo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
- </div>
+</head>
+
+<body>
+
+    <div id="fundoJ">
+        <div id="vida" >
+            <div id="vidaN"></div>
+            <p onclick="reduzir()">Round 1</p>
+            <div id="vidaS"></div>
+        </div>
+
+
+        <div id="narutoG" style="display: none;">
+            <p class="titulo" >Naruto Vence!!</p>
+            <a href="Jogo.html">
+                <button>
+                    Voltar ao inicio!
+                </button>
+            </a>
+            <br>
+            <img src="imagens/narutoGanha.gif" id="FinalNaruto">
+         
+        </div>
+        <div id="sasukeG" style="display: none;">
+            <p class="titulo" >Sasuke Vence!!</p>
+            <a href="Jogo.html">
+                <button>
+                    Voltar ao inicio!
+                </button>
+            </a>
+            <br>
+            <img src="imagens/sasukeganha2.gif" id="Finalsasuke">
+         
+        </div>
+
+
+        <div id="personagens">
+            <img src="imagens/naruto.webp" id="naruto" >
+            <img src="imagens/ataqueNaruto.gif" id="ataqueNaruto" style="display: none;" >
+            <img src="imagens/sasuke.gif" id="sasuke" >
+            <img src="imagens/ataqueSasuke.gif" id="ataqueSasuke" style="display: none;" >
+        </div>
+
+
+
+        <div id="perguntas">
+            <span id="pergunta"></span>
+            <input type="text" name="" id="resposta">
+            <button onclick="verificar()">Verificar respostas</button>
+            <span id="erro" style="display: none;">Errou</span>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
+
+<script>
+    var r = 0;
+
+    var respostas = ['CPU', 'ULA', 'Registradores', 'RAM', 'ROM', 'EPROM', 'FLASH', 'Memória de Massa', 'DMA', 'CS', 'Adress Bus', 'Data Bus', 'I5', 'I7', 'Dual Core', 'Quad Core'];
+
+    var question = [
+        'Qual é a sigla para Central Process Unit?',
+        'Um circuto digital que realiza operações lógicas e aritméticas. Qual é o nome deste componente?',
+        'Tipo de memória que se encontra no topo da hierarquia de memória',
+        'Tipo de memória volátil que tem como nome Random Acess Memory. Qual é a sigla deste componente?',
+        'Tipo de memória não volátil que oferece dados apenas para leitura',
+        'Tipo de memória não volátil que precisa ter seu chip exposto a luz ultravioleta para apagar seu conteúdo',
+        'Tipo particular de EEPROM que mantém as informações armazenadas sem a necessidade de uma fonte de energia elétrica',
+        'Tipo de memória que precisa ter seu conteúdo copiado na RAM para poder ser executado pela CPU',
+        'Permite que periféricos acessem diretamente a RAM sem ocupar processamento',
+        'Também conhecido como Slave Select (SS). Usado para selecionar um ou um conjunto de circuitos que estão conectados no computador',
+        'Grupo de linhas ou trilhas usadas para se referir a um endereço físico na memória. O número de trilhas determina a quantidade de endereços na memória física',
+        'Também chamado de Memory Bus. É responsável para carregar os dados.',
+        'Modelo de processador desenvolvido pela Intel qu teve sua primeira versão lançada em setembro de 2009',
+        'Modelo de processador desenvolvido pela Intel qu teve sua primeira versão lançada em novembro de 2008',
+        'Tipo de processador que possui dois processadores ou melhor dizendo ‘dois centros, núcleos ou cores de execução‘ no mesmo circuito integrado.  Cada core tem sua própria memória cash e controlador o que permite que funcione mais efetivamente do que um processador single',
+        'Segue o mesmo princípio de um dual-core, mas agora em teoria tem o dobro da capacidade de processamento'
+    ];
+    pergunta.innerHTML = question[0];
+    var largura = 500;
+    var largura2 = 500;
+    var i = 0;
+    function verificar() {
+
+        r = resposta.value;
+
+        if (largura > 0 && largura2 > 0) {
+
+
+            if (r == respostas[i]) {
+
+                largura -= 31.25;
+                pergunta.innerHTML = question[i + 1];
+
+                vidaS.style.width = largura + "px";
+                i++;
+                
+                    Aparecer();
+                    setInterval(Sumir, 4000);
+
+            } else {
+                AparecerS();
+                setInterval(sumirS,5300);
+                setInterval(sumirerro,5300);
+                erro.style.display = "block";
+                
+                largura2 -= 31.25;
+                vidaN.style.width = largura2 + "px";
+            }
+
+
+        } else {
+            if (largura <= 0) {
+                narutoGanha();
+              
+                
+            } else if (largura2 <= 0) {
+                sasukeGanha();
+            } else {
+                alert("Empate!")
+            }
+        }
+
+
+
+
+
+    }
+
+    function Aparecer() {
+       ataqueNaruto.style.display = "block";
+        naruto.style.display = "none";
+        sasuke.style.display = "none";
+    }
+    function Sumir() {
+       ataqueNaruto.style.display = "none";
+       sasuke.style.display = "block";
+        naruto.style.display = "block";
+    }
+    function AparecerS() {
+       ataqueSasuke.style.display = "block";
+        naruto.style.display = "none";
+        sasuke.style.display = "none";
+    }
+    function sumirS() {
+       ataqueSasuke.style.display = "none";
+       sasuke.style.display = "block";
+        naruto.style.display = "block";
+    }
+    function sumirerro() {
+        erro.style.display = "none";
+    }
+
+    function narutoGanha() {
+        perguntas.style.display = "none";
+        personagens.style.display = "none";
+vida.style.display = "none";
+narutoG.style.display = "block"
+    }
+    function sasukeGanha(){
+        perguntas.style.display = "none";
+        personagens.style.display = "none";
+vida.style.display = "none";
+sasukeG.style.display = "block";
+    }
+
+
+
+
+</script>
