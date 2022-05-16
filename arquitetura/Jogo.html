@@ -11,9 +11,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body id="ini">
+    <div id="some" style="display: none;">
+        <div id="Regras">
+            <img src="imagens/regras.png" class="pergaminho">
+    
+            <button onclick="fechar()">
+            <img src="imagens/x.png" class="x" onclick="fechar()">
+        </button>
+        </div>
+
+    </div>
+ 
+
+    <div id="some1" style="display: none;">
+    <div id="creditos" >
+        <img src="imagens/creditos.png" class="pergaminho">
+        <button onclick="fechar()">
+            <img src="imagens/x.png" class="x" onclick="fecharC()">
+        </button>
+    </div>
+    </div>
+
+
     <div id="inicial">
         <img src="imagens/Sasukenaruto.gif">
-
+       
         <div class="inicio">
             <p class="titulo">Naruto: ultimate TI ninja</p>
             <a href="index.html"> 
@@ -22,12 +44,11 @@
                 </button>
             </a>
            
-            <a href="" onclick ="newPopup()">
-            <button>
+            <button onclick="abrirC()">
                 Creditos
 
-            </button></a>
-            <button>
+            </button>
+            <button onclick="abrirR()">
                 Regras
             </button>
             
@@ -37,7 +58,17 @@
 </body>
 </html>
 <script>
-    function name(params) {
-        
+    function abrirR() {
+        some.style.display = "block";
+    }  
+    function abrirC() {
+    some1.style.display = "block";
     }
+    function fechar() {
+        some.style.display = "none";
+    }
+    function fecharC() {
+        some1.style.display = "none";
+    }
+  
 </script>
