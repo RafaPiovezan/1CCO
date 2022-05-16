@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="0">Escreva sua idade:</label>
+    <input type="text" name="" id="idade">
+    <button onclick="fases()">Fases da vida</button> 
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    /*- Primeira Infância: 0 a 4 anos
+- Pré-escolar: + de 4 aos 6 anos
+- Segunda Infância: + de 6 aos 10 anos
+- Adolescência: + de 10 aos 18 anos
+- Adulto: + de 18 até os 50 anos
+- Melhor idade: + de 50 anos até 100 anos
+- Matusalém: + de 100 anos
+*/
+    function fases() {
+        var id = idade.value;
+
+        for (var i = 0 ; i < id; i++) {
+           if (i >= 0 && i < 4) {
+               resultado.innerHTML += `${i} Primeira Infância <br>`;
+           }else if (i >=4 && i < 6) {
+               resultado.innerHTML += `${i} Pré-escolar <br>`;
+           }else if (i >= 6 && i < 10) {
+               resultado.innerHTML += `${i} Segunda Infância <br>`;
+           }else if (i >=10 && i < 18) {
+               resultado.innerHTML += `${i} Adolescência <br>`;
+           }else if (i >=18 && i < 50) {
+               resultado.innerHTML += `${i} Adulto <br>`;
+           }else if (i >=50 && i < 100) {
+               resultado.innerHTML += `${i} Melhor idade <br>`;
+           }else{
+            resultado.innerHTML += `${i} Matusalém <br>`;
+           }
+            
+        }
+    }
+</script>
