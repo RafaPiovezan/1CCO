@@ -51,21 +51,51 @@ var j = 0;
         <p>
       O time teve: ${v} vitórias, ${e} empates, ${d} derrotas</p>
       <p>Pontuação total: ${total} pontos</p>
-      <p>Aproveitamento: ${((total / (final.length *3))*100)}%</p>`;
+      <p>Aproveitamento: ${((total / (final.length *3))*100).toFixed(1)}%</p>`;
     }
     
     function consultar() {
         j = Number(jogo.value);
 
-    
-
-            if (final[j]==1) {
+    var parametro = j - 1;
+        if (final[parametro]==undefined) {
+            resultados.innerHTML = `Ainda não definido`;
+        }else{
+            if (final[parametro]==1) {
                 resultados.innerHTML = `O resultado da ${j}° partida foi vitória`;
-            }else if (final[j]==2){
+            }else if (final[parametro]==2){
                 resultados.innerHTML = `O resultado da ${j}° partida foi derrota`;
             }else{
                 resultados.innerHTML = `O resultado da ${j}° partida foi empate`;
             }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
         
         
      
