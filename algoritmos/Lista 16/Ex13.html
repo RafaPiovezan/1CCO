@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Indique o resultado</label>
+    <select name="" id="opcoes">
+        <option value="0">Selecione</option>
+        <option value="1">Vitória</option>
+        <option value="2">Derrota</option>
+        <option value="3">Empate</option>
+    </select>
+
+    <button onclick="registrar()">Registrar Jogo</button>
+    <label for="">Qual jogo deseja saber o resultado?</label>
+   <input type="text" name="" id="jogo" onchange="consultar()">
+
+    
+
+    <div id="resultados">
+
+    </div>
+</body>
+</html>
+
+<script>
+    var final = [];
+    var v = 0;
+    var d = 0;
+    var e = 0;
+    var t = 0;
+var j = 0;
+    function registrar() {
+        final.push(opcoes.value);
+        
+        if (opcoes.value == 1) {
+
+            v++;
+        }if (opcoes.value == 2) {
+            d++;
+        }if (opcoes.value == 3) {
+            e++;
+        }
+        
+        total = (v*3)+e;
+        resultados.innerHTML = `
+        <p>
+      O time teve: ${v} vitórias, ${e} empates, ${d} derrotas</p>
+      <p>Pontuação total: ${total} pontos</p>
+      <p>Aproveitamento: ${((total / (final.length *3))*100)}%</p>`;
+    }
+    
+    function consultar() {
+        j = Number(jogo.value);
+
+    
+
+            if (final[j]==1) {
+                resultados.innerHTML = `O resultado da ${j}° partida foi vitória`;
+            }else if (final[j]==2){
+                resultados.innerHTML = `O resultado da ${j}° partida foi derrota`;
+            }else{
+                resultados.innerHTML = `O resultado da ${j}° partida foi empate`;
+            }
+        
+        
+     
+    }
+</script>
